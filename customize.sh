@@ -37,6 +37,9 @@ ui_print "      INSTALLING        "
 ui_print " "
 sleep 1.5
 
+mkdir -p $MODPATH/system/bin
+unzip -o "$ZIPFILE" 'acut64' -d $MODPATH/system/bin >&2
+
 unzip -o "$ZIPFILE" 'VestiaZeta/*' -d $MODPATH >&2
 set_perm $MODPATH/system/bin/acut64 0 0 0755 0755
 set_perm_recursive $MODPATH/VestiaZeta 0 0 0774 0774
